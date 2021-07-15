@@ -1,0 +1,21 @@
+// Theme Bootstraping
+
+function meal_theme_setup() {
+    load_theme_textdomain('meal', get_theme_file_path('/languages'));
+    add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
+    add_theme_support('custom-logo');
+    add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption'));
+    add_theme_support('post-formats', array('image', 'gallery', 'quote', 'link', 'audio', 'video'));
+    add_editor_style('/assets/css/editor-style.css');
+
+    register_nav_menu( "topmenu", __( "Top Menu", "meal" ) );
+    register_nav_menus(array(
+        'footer-left-menu' => __('Footer Left Menu', 'meal'),
+        'footer-middle-menu' => __('Footer Middle Menu', 'meal'),
+        'footer-right-menu' => __('Footer Right Menu', 'meal'),
+    ));
+    add_image_size("meal-home-square",400,400,true);
+}
+
+add_action('after_setup_theme', 'meal_theme_setup');
