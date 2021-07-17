@@ -1,0 +1,12 @@
+<?php
+/*
+Plugin Name: Meal Helper
+Plugin URI: https://mealcompanion.com/
+Description: Simple but flexible.
+Author: Md Abu Musa
+Author URI: https://wordpress.com/
+License: GPLv2 or later
+Text Domain: meal_companion
+Domain Path: /languages/
+Version: 1.0.0
+*/
