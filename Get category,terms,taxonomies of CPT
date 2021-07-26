@@ -1,0 +1,15 @@
+## Declare below function in function.php ##
+
+function get_recipe_category($recipi_id) {
+    $terms = wp_get_post_terms($recipi_id, 'category');
+    if($terms) {
+        $first_term = array_shift($terms);
+        return $first_term->name;
+    }
+    return 'Food';
+}
+
+
+## Call function ##
+
+<?php echo esc_html(get_recipe_category($meal_recipe_one->ID)); ?>
