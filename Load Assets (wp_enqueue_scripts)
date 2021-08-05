@@ -6,7 +6,6 @@ function meal_assets()
     wp_enqueue_style( 'meal-style', get_stylesheet_uri(), null, '1.0');
 
 
-    wp_enqueue_script( 'meal-jquery-migrate-3.0.1.min.js', get_template_directory_uri().'/assets/js/jquery-migrate-3.0.1.min.js', array('jquery
     wp_enqueue_script( 'meal-portfolio.js', get_template_directory_uri().'/assets/js/portfolio.js', array('jquery'),'1.0',true);
     wp_enqueue_script( 'meal-main.js', get_template_directory_uri().'/assets/js/main.js', array('jquery'),'1.0',true); 
 }
