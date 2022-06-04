@@ -1,0 +1,17 @@
+/**
+ * Add the field to order emails
+ **/
+// add_filter('woocommerce_email_order_meta_keys', 'dd_email_order_meta_keys');
+
+// function dd_email_order_meta_keys( $keys ) {
+//     $keys['Delivery Date'] = '_vicodemedia_add_field';
+//     return $keys;
+// }
+
+add_action( "woocommerce_email_after_order_table", "custom_woocommerce_email_after_order_table", 10, 1);
+
+function custom_woocommerce_email_after_order_table( $order ) {
+
+    echo '<p><strong>Delivery Date:</strong>'. get_post_meta( $order->id, "_vicodemedia_add_field", true ) .'</p>';
+
+}
